@@ -1,0 +1,23 @@
+@import "../components/App.scss";
+
+.register-form {
+    background-color: map-get($map: $color, $key: bgCard);
+    padding: 1rem;
+    margin: 1rem auto;
+    .gender {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        .custom-radio {
+            margin-right: 1rem;
+        }
+    }
+    .upload {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        .alert-success {
+            margin: 0;
+        }
+    }
+}

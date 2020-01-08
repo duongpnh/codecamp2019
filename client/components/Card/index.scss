@@ -1,0 +1,85 @@
+@import "../App.scss";
+
+.custom-link {
+    &:hover {
+        text-decoration: none;
+    }
+    .custom-card {
+        background-color: map-get($map: $color, $key: bgCard);
+        margin-top: 1rem;
+        padding: 1rem;
+        border: 1px solid transparent;
+        transition: 0.3s;
+        &:hover {
+            border: 1px solid map-get($map: $color, $key: borderColor);
+        }
+        .card__top {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            .card__top--left { 
+                display: flex;
+                align-items: center;
+                justify-content: flex-start;
+                img {
+                    width: 30px;
+                    height: 30px;
+                    object-fit: cover;
+                    margin-right: 0.5rem;
+                }
+            }
+            .card__top--right {
+                color: map-get($map: $color, $key: colorTime);
+            }
+        }
+        .card__middle {
+            .card-title {
+                margin-top: 1rem;
+                color: map-get($map: $color, $key: colorContent);
+            }
+            .card-content {
+                position: relative;
+                margin-top: 1rem;
+                max-height: 200px;
+                overflow: hidden;
+                color: map-get($map: $color, $key: colorContent);
+                &:after {
+                    content: '';
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                    background: linear-gradient(to top, #ffffff, transparent, transparent);
+                }
+            }
+        }
+        .card__bottom {
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            margin-top: 1rem;
+            color: map-get($map: $color, $key: colorCardFooter);
+            .card-vote {
+                margin-right: 1rem;
+                .fa {
+                    padding: 0.5rem;
+                    &:hover {
+                        background-color: map-get($map: $color, $key: bgColor);
+                        color: map-get($map: $color, $key: colorCardFooterHover);
+                    }
+                }
+            }
+            .card-comment {
+                padding: 0.1rem 0.5rem;
+                .fa {
+                    padding: 0.5rem;
+                }
+                &:hover {
+                    background-color: map-get($map: $color, $key: bgColor);
+                    color: map-get($map: $color, $key: colorCardFooterHover);
+                }
+            }
+        }
+    }
+}

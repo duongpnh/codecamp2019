@@ -1,0 +1,19 @@
+@import '../components/App.scss';
+
+.post__creator--container {
+    padding: 1rem;
+    margin-top: 1rem;
+    background-color: map-get($map: $color, $key: bgCard);
+    input {
+        flex: 1;
+    }
+    .custom-drop-menu {
+        img {
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-right: 0.5rem;
+        }
+    }
+}

@@ -1,0 +1,8 @@
+@import "../components/App.scss";
+
+.login-form {
+    background-color: map-get($map: $color, $key: bgCard);
+    padding: 1rem;
+    margin: 3rem auto;
+    
+}

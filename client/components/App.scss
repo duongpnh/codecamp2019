@@ -1,0 +1,16 @@
+$color: (
+    bgColor: #eaeaea,
+    bgNav: #fff,
+    bgCard: #fff,
+    colorTime: #AFB1B2,
+    colorCardFooter: #878A8C,
+    colorCardFooterHover: #262626,
+    borderColor: #262626,
+    colorContent: #111111
+);
+
+body {
+    margin: 0;
+    padding: 0;
+    background: map-get($map: $color, $key: bgColor); 
+}

@@ -1,0 +1,32 @@
+@import '../components/App.scss';
+
+.post {
+    margin: 1rem 0;
+    padding: 1rem;
+    background-color: map-get($map: $color, $key: bgCard);
+    .post__title {
+        font-size: 2.5rem;
+    }
+    .post__info {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin: 1rem 0;
+        .post__author {
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            img {
+                width: 30px;
+                height: 30px;
+                object-fit: cover;
+                margin-right: 0.5rem;
+            }
+        }
+        .post__created-time {
+            color: map-get($map: $color, $key: colorTime);
+            font-style: italic;
+            font-size: 0.8rem;
+        }
+    }
+}

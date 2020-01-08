@@ -1,0 +1,74 @@
+@import '../components/App.scss';
+
+.user__profile--wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    .user__profile {
+        margin-top: 1rem;
+        position: relative;
+        .user__profile--front {
+            z-index: 1;
+            text-align: center;
+            img {
+                width: 150px;
+                height: 150px;
+                border-radius: 50%;
+                object-fit: cover;
+            }
+        }
+        .user__profile--back {
+            position: absolute;
+            z-index: -1;
+            width: 100%;
+            height: 300px;
+            background-color: map-get($map: $color, $key: bgCard);
+            top: 40%;
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            justify-content: flex-end;
+            .displayName {
+                font-size: 2.5rem;
+            }
+            .perk-wrapper {
+                margin-top: 1rem;
+                display: flex;
+                align-items: center;
+                flex-direction: row;
+                justify-content: space-around;
+                width: 100%;
+                .perk {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    flex-direction: column;
+                    .fa {
+                        margin-bottom: 0.5rem;
+                    }
+                    span {
+                        font-size: 1.5rem;
+                    }
+                }
+            }
+        }
+    }
+    .userInfo {
+        margin-top: 35%;
+        background-color: map-get($map: $color, $key: bgCard);
+        ul {
+            li {
+                padding: 0.5rem 1rem;
+                &:not(:last-child) {
+                    margin-right: 0.5rem;
+                }
+                a {
+                    color: map-get($map: $color, $key: colorContent);
+                }
+            }
+        }
+        .tab-content {
+            padding: 0.5rem;
+        }
+    }
+}

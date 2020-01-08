@@ -1,0 +1,8 @@
+@import "../App.scss";
+
+.custom-navbar {
+    background-color: map-get($map: $color, $key: bgNav);
+    .perk {
+        margin-left: 0.5rem;
+    }
+}

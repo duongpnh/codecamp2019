@@ -1,0 +1,27 @@
+@import '../components/App.scss';
+
+.post__creator {
+    padding: 1rem;
+    margin-top: 1rem;
+    background-color: map-get($map: $color, $key: bgCard);
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    a {
+        flex: 1;
+    }
+    .fa {
+        padding: 0.5rem;
+        border: 1px solid map-get($map: $color, $key: bgColor);
+        &:hover {
+            border: 1px solid map-get($map: $color, $key: borderColor);
+        }
+        &:not(:last-child) {
+            margin: 0.5rem 0 0.5rem 0.5rem;
+        }
+    }
+}
+.custom-pagination {
+    display: flex;
+    justify-content: center;
+}
